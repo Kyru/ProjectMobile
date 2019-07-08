@@ -232,7 +232,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 238473978}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67a44c763536c1f44bba9b81b0720de2, type: 3}
   m_Name: 
@@ -241,6 +241,7 @@ MonoBehaviour:
   - {x: 2, y: 0.5, z: -3}
   - {x: 0, y: 0.5, z: -3}
   - {x: -2, y: 0.5, z: -3}
+  bullet: {fileID: 2892808738456953020, guid: fc2f4de100d68894ab7878fd091dd5de, type: 3}
 --- !u!65 &238473980
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -339,7 +340,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 238473978}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f4de695c7a3bbb458f63d7b3be9d2b6, type: 3}
   m_Name: 

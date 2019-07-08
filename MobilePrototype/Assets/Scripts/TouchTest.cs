@@ -5,6 +5,7 @@ using UnityEngine;
 public class TouchTest : MonoBehaviour
 {
     [SerializeField] Vector3[] positions;
+    [SerializeField] GameObject bullet; 
     int actualPosition;
     int maxPosition;
     int minPosition;
@@ -37,20 +38,27 @@ public class TouchTest : MonoBehaviour
                     if (actualPosition + 1 < maxPosition) actualPosition++;
                     transform.position = positions[actualPosition];
                 }
+                if (myTouches[i].position.x >= (Screen.width / 2))         // parte derecha
+                {
+                    stationaryFingerId = myTouches[i].fingerId;
+                    Instantiate(bullet, transform.position, transform.rotation);
+                    // transform.localScale += new Vector3(0, 0, 0.1f);
+                }
             }
             else if (myTouches[i].phase == TouchPhase.Stationary)
             {
                 if (myTouches[i].position.x >= (Screen.width / 2))         // parte derecha
                 {
                     stationaryFingerId = myTouches[i].fingerId;
-                    transform.localScale += new Vector3(0, 0, 0.1f);
+
+                    // transform.localScale += new Vector3(0, 0, 0.1f);
                 }
             }
             else if (myTouches[i].phase == TouchPhase.Moved && myTouches[i].fingerId == stationaryFingerId)
             {
                 if (myTouches[i].position.x >= (Screen.width / 2))         // parte derecha
                 {
-                    transform.localScale += new Vector3(0, 0, 0.1f);
+                    // transform.localScale += new Vector3(0, 0, 0.1f);
                 }
             }
             else if (myTouches[i].phase == TouchPhase.Ended && myTouches[i].fingerId == stationaryFingerId)
