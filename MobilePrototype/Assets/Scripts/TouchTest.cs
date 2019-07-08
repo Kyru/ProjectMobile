@@ -34,7 +34,7 @@ public class TouchTest : MonoBehaviour
                 }
                 else if (myTouches[i].position.x < (Screen.width / 2) && myTouches[i].position.y > (Screen.height / 2))  // arriba izquierda
                 {
-                    if (actualPosition + 1 <= maxPosition) actualPosition++;
+                    if (actualPosition + 1 < maxPosition) actualPosition++;
                     transform.position = positions[actualPosition];
                 }
             }

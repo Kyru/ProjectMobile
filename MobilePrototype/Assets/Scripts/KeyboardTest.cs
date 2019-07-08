@@ -37,7 +37,7 @@ public class KeyboardTest : MonoBehaviour
         if (Input.GetKeyDown("up"))
         {
             print("I pressed up");
-            if (actualPosition + 1 <= maxPosition)
+            if (actualPosition + 1 < maxPosition)
             {
                 actualPosition++;
                 transform.position = positions[actualPosition];
