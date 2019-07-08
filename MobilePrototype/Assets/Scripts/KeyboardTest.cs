@@ -5,6 +5,7 @@ using UnityEngine;
 public class KeyboardTest : MonoBehaviour
 {
     [SerializeField] Vector3[] positions;
+    [SerializeField] GameObject bullet; 
     int actualPosition;
     int maxPosition;
     int minPosition;
@@ -42,6 +43,10 @@ public class KeyboardTest : MonoBehaviour
                 actualPosition++;
                 transform.position = positions[actualPosition];
             }
+        }
+        if (Input.GetKeyDown("space"))
+        {
+            Instantiate(bullet, transform.position, transform.rotation);
         }
     }
 }
